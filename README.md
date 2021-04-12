@@ -1,3 +1,20 @@
+<p align="center">
+  <a href="https://github.com/bittencourtthulio/SimpleORM/blob/master/assets/logo.fw.png">
+    <img alt="router4d" src="https://github.com/bittencourtthulio/SimpleORM/blob/master/assets/logo.fw.png">
+  </a>  
+</p>
+<br>
+<p align="center">
+  <img src="https://img.shields.io/github/v/release/bittencourtthulio/SimpleORM?style=flat-square">
+  <img src="https://img.shields.io/github/stars/bittencourtthulio/SimpleORM?style=flat-square">
+  <img src="https://img.shields.io/github/contributors/bittencourtthulio/SimpleORM?color=orange&style=flat-square">
+  <img src="https://img.shields.io/github/forks/bittencourtthulio/SimpleORM?style=flat-square">
+   <img src="https://tokei.rs/b1/github/bittencourtthulio/SimpleORM?color=red&category=lines">
+  <img src="https://tokei.rs/b1/github/bittencourtthulio/SimpleORM?color=green&category=code">
+  <img src="https://tokei.rs/b1/github/bittencourtthulio/SimpleORM?color=yellow&category=files">
+</p>
+
+
 # SimpleORM
 ORM Simples para Aplicações Delphi
 
@@ -77,6 +94,10 @@ Obs.: Em casos como o "Campo('ID')" a anotação é opcional, pois a `property` 
 
 ## Instalação
 Basta adicionar ao LibraryPatch o Caminho do SimpleORM ou via [Boss](https://github.com/HashLoad/boss) com o comando `boss install bittencourtthulio/SimpleORM`, não precisa realizar a instalação de nenhum componente.
+
+## Dependências
+  - DataSetConverter4Delphi
+  - Rest Dataware CORE
 
 ## Uses Necessárias
 
@@ -285,3 +306,6 @@ begin
 end;
 ```
 
+## Grupo do telegram
+Esse grupo tem como objetivo ajudar seus integrantes em assuntos diversos ao uso do componente, e colaboração para a evolução desse maravilhoso ORM ([Object-relational mapping](https://pt.wikipedia.org/wiki/Mapeamento_objeto-relacional)).
+Acesse com esse link para participar do [Grupo SimpleORM](https://t.me/joinchat/Tv8fVFe_hdz0rJwq)

@@ -36,6 +36,9 @@ Type
 
 implementation
 
+uses
+  System.SysUtils;
+
 { TSimpleDAOSQLAttribute<T> }
 
 function TSimpleDAOSQLAttribute<T>.&End: iSimpleDAO<T>;
@@ -62,14 +65,16 @@ function TSimpleDAOSQLAttribute<T>.Join(
   aSQL: String): iSimpleDAOSQLAttribute<T>;
 begin
   Result := Self;
-  FJoin := FJoin + ' ' + aSQL;
+  if Trim(aSQL) <> '' then
+    FJoin := FJoin + ' ' + aSQL;
 end;
 
 function TSimpleDAOSQLAttribute<T>.GroupBy(
   aSQL: String): iSimpleDAOSQLAttribute<T>;
 begin
   Result := Self;
-  FGroupBy := FGroupBy + ' ' + aSQL;
+  if Trim(aSQL) <> '' then
+    FGroupBy := FGroupBy + ' ' + aSQL;
 end;
 
 function TSimpleDAOSQLAttribute<T>.Clear: iSimpleDAOSQLAttribute<T>;
@@ -97,7 +102,8 @@ function TSimpleDAOSQLAttribute<T>.Fields(aSQL: String)
   : iSimpleDAOSQLAttribute<T>;
 begin
   Result := Self;
-  FFields := FFields + ' ' + aSQL;
+  if Trim(aSQL) <> '' then
+    FFields := FFields + ' ' + aSQL;
 end;
 
 class function TSimpleDAOSQLAttribute<T>.New(Parent: iSimpleDAO<T>)
@@ -115,14 +121,16 @@ function TSimpleDAOSQLAttribute<T>.OrderBy(aSQL: String)
   : iSimpleDAOSQLAttribute<T>;
 begin
   Result := Self;
-  FOrderBy := FOrderBy + ' ' + aSQL;
+  if Trim(aSQL) <> '' then
+    FOrderBy := FOrderBy + ' ' + aSQL;
 end;
 
 function TSimpleDAOSQLAttribute<T>.Where(aSQL: String)
   : iSimpleDAOSQLAttribute<T>;
 begin
   Result := Self;
-  FWhere := FWhere + ' ' + aSQL;
+  if Trim(aSQL) <> '' then
+    FWhere := FWhere + ' ' + aSQL;
 end;
 
 function TSimpleDAOSQLAttribute<T>.Where: String;
